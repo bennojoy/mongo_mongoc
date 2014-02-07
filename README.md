@@ -1,4 +1,4 @@
-mongoc
+mongo_mongoc
 ========
 
 This roles helps to install and configure the mongo configuration servers. 
