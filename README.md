@@ -3,7 +3,7 @@ mongoc
 
 This roles helps to install and configure the mongo configuration servers. 
 
-In addition to this role if combined with other roles like mongod, mongos, shard this can used to 
+In addition to this role if combined with other roles like mongo_mongod, mongo_mongos, mongo_shard this can used to 
 build a production grade mongodb cluster with multi replication master and shards.
   
 
@@ -32,7 +32,7 @@ mongoc_admin_pass: "foobar"                     # The administrator passoword fo
 ```
 - hosts: all
   roles:
-  - role: bennojoy.mongoc
+  - role: bennojoy.mongo_mongoc
     mongoc_datadir_prefix: "/data/"
     mongoc_port: 2800
     mongoc_admin_pass: foobar
