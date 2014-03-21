@@ -59,7 +59,7 @@
   when: ansible_os_family == "Debian"
 
 - name: Create the mongo configuration server file
-  template: src=mongoc.conf.j2 dest=/etc/mongoc.conf
+  template: src=mongoc.conf.j2 dest=/etc/mongoc.conf owner={{ mongo_user }} group={{ mongo_group }}
 
 - name: Copy the keyfile for authentication
   copy: src=roles/mongod/files/secret dest={{ mongoc_datadir_prefix }}/secret owner={{ mongo_user }} group={{ mongo_group }} mode=0400
